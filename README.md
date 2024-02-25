@@ -290,6 +290,7 @@ SERVER_PORT=8000
 
 Use the following commands to build and run the Docker containers:
 
+
 ```bash
 # Build and run containers
 docker-compose up --build
@@ -297,6 +298,9 @@ docker-compose up --build
 # To run in detached mode
 docker-compose up --build -d
 ```
+
+- Pull the images from docker hub https://hub.docker.com/repositories/rishijain27
+- repositories are test and mysqldb
 
 
 
