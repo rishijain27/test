@@ -279,12 +279,12 @@ Docker Compose is used to orchestrate the deployment of backend components. Ensu
 #### Configuration
 
 Create an `.env` file in the root directory and include the following environment variables:
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=rootpassword
-DB_NAME=node-complete1
-DB_PORT=3306
-SERVER_PORT=8000
+- DB_HOST=localhost
+- DB_USER=root
+- DB_PASSWORD=rootpassword
+- DB_NAME=node-complete1
+- DB_PORT=3306
+- SERVER_PORT=8000
 
 #### Building and Running
 
