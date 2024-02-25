@@ -300,7 +300,7 @@ docker-compose up --build -d
 ```
 
 - Pull the images from docker hub https://hub.docker.com/repositories/rishijain27
-- repositories are test and mysqldb
+- repositories are test and mysql
 
 
 
