@@ -75,6 +75,7 @@ The backend serves as the API server for the Student Assignment App. It handles 
 - **title**: string
 - **description**: string
 - **dueDate**: text
+- **score**:integer
 - **teacherId**: foreign key, (Teacher),integer
 
 ##### Grade Table
@@ -139,39 +140,139 @@ The backend serves as the API server for the Student Assignment App. It handles 
   - **Success**: Status Code 200
   ```json
   {
-    "message#### 3. Teacher Login
+    "message": "Login successful"
+  }
+  ```
+  - **Error**: Status Code 402
+  ```json
+  {
+    "error": "Invalid Email or password"
+  }
+  ```
 
-- **Endpoint**: `/teacherSignin`
+#### 4.   Create Assignment
+
+- **Endpoint**: `/createAssign`
 - **Method**: `POST`
-- **Description**: Validates teacher credentials for login.
+- **Description**: Validates teacher credentials for creating the assignment and sending email to each and every student.
 - **Request Body**:
   ```json
   {
-    "email": "example_email",
-    "password": "example_password"
+    "title": "example_title",
+    "description": "example_description",
+     "dueDate":"example_duedate",
+     "score""exmaple_score"
   }
   ```
 - **Response**:
   - **Success**: Status Code 200
   ```json
   {
-    "message": "Login successful"
+    "message": "Assignment Created Successfully"
   }
   ```
-  - **Error**: Status Code 401
+  - **Error**: Status Code 402
   ```json
   {
-    "error": "Invalid Email or password"
-  }
-  ```: "Login successful"
+    "error": "error message"
   }
   ```
-  - **Error**: Status Code 401
+
+#### 5.   Update Assignment
+
+- **Endpoint**: `/updateAssign/:assignid`
+- **Method**: `POST`
+- **Description**: Validates teacher credentials for updateing the assignment.
+- **Request Body**:
   ```json
   {
-    "error": "Invalid Email or password"
+    "title": "example_title",
+    "description": "example_description",
+     "dueDate":"example_duedate"
+     "score":"example_score"
   }
   ```
+- **Response**:
+  - **Success**: Status Code 200
+  ```json
+  {
+    "message": "updated Successfully"
+  }
+  ```
+  - **Error**: Status Code 402
+  ```json
+  {
+    "error": "error meesage"
+  }
+  ```
+
+#### 6.   Delete Assignment
+
+- **Endpoint**: `/deleteAssign/:assignid`
+- **Method**: `Delete`
+- **Description**: Validates teacher credentials for deleteing the assignment.
+- **Response**:
+  - **Success**: Status Code 200
+  ```json
+  {
+    "message": "Deleted Successfully"
+  }
+  ```
+  - **Error**: Status Code 402
+  ```json
+  {
+    "error": "This assignment cannot be deleted as it is created by some other Teacher"
+  }
+  ```
+
+### 7. Submit Assignment
+
+- **Endpoint**: `/allAssignment/submitAssign/:assignid`
+- **Method**: `POST`
+- **Description**: Helps Student to submit the assignment.
+- **Request Body**:
+  ```json
+  {
+    "name": "example_name",
+    "email": "example_email",
+  }
+  ```
+- **Response**:
+  - **Success**: Status Code 200
+  ```json
+  {
+    "message": "Assignment submitted and marks were assigned"
+  }
+  ```
+  - **Error**: Status Code 402
+  ```json
+  {
+    "error": "error meesage"
+  }
+  ```
+
+#### 6.   view Student Report
+
+- **Endpoint**: `/studentReport/:studentid`
+- **Method**: `GET`
+- **Description**: All reports of a particular student are given.
+- **Response**:
+  - **Success**: Status Code 200
+  ```json
+  {
+    "student_reports": "reports "
+  }
+  ```
+  - **Error**: Status Code 402
+  ```json
+  {
+    "error": "error message"
+  }
+  ```
+
+
+
+
 
   
 
