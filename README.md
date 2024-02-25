@@ -171,7 +171,8 @@ The backend serves as the API server for the Student Assignment App. It handles 
     "title": "example_title",
     "description": "example_description",
      "dueDate":"example_duedate",
-     "score""exmaple_score"
+     "score":"exmaple_score",
+     "teacherId":"exapmle_teacherId"
   }
   ```
 - **Response**:
