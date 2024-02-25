@@ -48,7 +48,8 @@ The first step involved a comprehensive analysis of the requirements:
 - Backend: ![Node](https://hub.docker.com/api/media/repos_logo/v1/library%2Fnode)
 - Containerization: ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 - Database: ![MySQL](https://hub.docker.com/api/media/repos_logo/v1/library%2Fmysql)
-- Email Service: ![Senggrid Api](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAIVBMVEVHcExRqeRSquRSquRRqeNSqeNQqeNRqeNhru1RqeNRqeNAUwp9AAAAC3RSTlMAQZpm/3tW7wm4L+vfVawAAABiSURBVHgBYwADRiUYMIAIiLjAgCtEIIUeApjWiiMJtBkbG5sJgxw5HSKwBEQpgJRxggUg5s0YJAKzOoCAuQTIcoQIeM4EAi2xtLQ0ASSfu6EHhTM9BRAB7ggR4EqDgRVgPgAXcGj7gCWaQgAAAABJRU5ErkJggg==)
+- Email Service: ![Senggrid Api](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa1gIr8JEsK497znTLE4Gj8O7-zjGzjJ8hx-Vmyl7_JAsMIdjddcFKjR16lI0FJegXiUI&usqp=CAU)
+- Running Queries- ![Sequelize](https://sequelize.org/img/logo.svg)
 
 ## Project Structure
 
