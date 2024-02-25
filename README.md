@@ -270,6 +270,35 @@ The backend serves as the API server for the Student Assignment App. It handles 
   }
   ```
 
+## Containerization
+
+### Docker Compose
+
+Docker Compose is used to orchestrate the deployment of backend components. Ensure you have Docker and Docker Compose installed on your system.
+
+#### Configuration
+
+Create an `.env` file in the root directory and include the following environment variables:
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=rootpassword
+DB_NAME=node-complete1
+DB_PORT=3306
+SERVER_PORT=8000
+
+#### Building and Running
+
+Use the following commands to build and run the Docker containers:
+
+```bash
+# Build and run containers
+docker-compose up --build
+
+# To run in detached mode
+docker-compose up --build -d
+```
+
+
 
 
 
