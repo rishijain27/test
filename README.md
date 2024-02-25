@@ -7,6 +7,7 @@ Welcome to the  Student Assignment App! This application serves as an Assignment
 
 1. **Assignment submission**
    - As soon as a student submits the assignment, the student is graded on submitting.
+   - Student is not allowed to submit the same assignment twice.
 
 2. **Login**
   - Multiple teachers can login and create as many assignments as they wish.
@@ -19,8 +20,12 @@ Welcome to the  Student Assignment App! This application serves as an Assignment
    - As Teacher Logs in in they are provided with the JWT Authentication token.
   
 2. **Assignment Submission**
-   - Students can submit any assignment they want
-   - Students are graded by the respective teachers.
+   - Students can submit any assignment they want.
+   - Students are graded by the respective teachers on suibmitting the assignment.
+
+3. **Assignment Creation**
+   - When an assignment is created all the students recieve emails os the assignment.
+   - Used Sendgrid API for emailing the students.
 
 ## Approach
 
@@ -43,6 +48,7 @@ The first step involved a comprehensive analysis of the requirements:
 - Backend: ![Node](https://hub.docker.com/api/media/repos_logo/v1/library%2Fnode)
 - Containerization: ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 - Database: ![MySQL](https://hub.docker.com/api/media/repos_logo/v1/library%2Fmysql)
+- Email Service: ![Senggrid Api](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAIVBMVEVHcExRqeRSquRSquRRqeNSqeNQqeNRqeNhru1RqeNRqeNAUwp9AAAAC3RSTlMAQZpm/3tW7wm4L+vfVawAAABiSURBVHgBYwADRiUYMIAIiLjAgCtEIIUeApjWiiMJtBkbG5sJgxw5HSKwBEQpgJRxggUg5s0YJAKzOoCAuQTIcoQIeM4EAi2xtLQ0ASSfu6EHhTM9BRAB7ggR4EqDgRVgPgAXcGj7gCWaQgAAAABJRU5ErkJggg==)
 
 ## Project Structure
 
@@ -76,13 +82,13 @@ The backend serves as the API server for the Student Assignment App. It handles 
 - **description**: string
 - **dueDate**: text
 - **score**:integer
-- **teacherId**: foreign key, (Teacher),integer
+- **teacherId**: foreign key (Teacher),integer
 
 ##### Grade Table
 - **_id**:primary key, integer
 - **score**: integer
 - **studentId**: foreign key(Student),integer
-- **assignmentId**: foreign key(assignment),integer
+- **assignmentId**: foreign key(Assignment),integer
 
   #### Associations
 
@@ -140,7 +146,8 @@ The backend serves as the API server for the Student Assignment App. It handles 
   - **Success**: Status Code 200
   ```json
   {
-    "message": "Login successful"
+    "token": "example_token",
+     "teacher": { example_id, example_name, exmaple_email }
   }
   ```
   - **Error**: Status Code 402
@@ -260,13 +267,22 @@ The backend serves as the API server for the Student Assignment App. It handles 
   - **Success**: Status Code 200
   ```json
   {
-    "student_reports": "reports "
+    "student_reports": {
+        "result": [
+              {
+                 "_id": "example_id",
+                 "score": "exmpale_score",
+                 "studentId": "example_studentId",
+                 "assignmentId": "example_assignmentId"
+              }
+        ]
+     }
   }
   ```
   - **Error**: Status Code 402
   ```json
   {
-    "error": "error message"
+    "error": "Error: Duplicate entry 'x-y' for key 'grades.grades_studentId_assignmentId_unique'"
   }
   ```
 
