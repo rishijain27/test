@@ -1,5 +1,7 @@
 # Student Assignment App
 
+-Postman Curl Link: https://api.postman.com/collections/25423999-1ba01caf-f0d7-4515-9cd0-e68197910cc1?access_key=PMAT-01HQGSP9W57CMD36C9W1H7JDNA
+
 ## Overview
 Welcome to the  Student Assignment App! This application serves as an Assignment submission, where teacher are allowed to login and create assignments and then the students submit these assignments and are graded by the teacher who created that partical assignment.
 
