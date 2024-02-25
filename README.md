@@ -148,7 +148,7 @@ The backend serves as the API server for the Student Assignment App. It handles 
   ```json
   {
     "token": "example_token",
-     "teacher": { example_id, example_name, exmaple_email }
+     "teacher": { "example_id", "example_name", "exmaple_email" }
   }
   ```
   - **Error**: Status Code 402
