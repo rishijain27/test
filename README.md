@@ -19,13 +19,15 @@ Welcome to the  Student Assignment App! This application serves as an Assignment
    - Teacher can login and sign up.
    - As Teacher Logs in in they are provided with the JWT Authentication token.
   
-2. **Assignment Submission**
+2. **Assignment Creation**
+   - When an assignment is created all the students recieve emails os the assignment.
+   - Used Sendgrid API for emailing the students.
+  
+3. **Assignment Submission**
    - Students can submit any assignment they want.
    - Students are graded by the respective teachers on suibmitting the assignment.
 
-3. **Assignment Creation**
-   - When an assignment is created all the students recieve emails os the assignment.
-   - Used Sendgrid API for emailing the students.
+
 
 ## Approach
 
